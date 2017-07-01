@@ -8,7 +8,7 @@ x_co = gets.to_i
 print "Y : "
 y_co = gets.to_i 
 print "Direction (N/E/W/S) : "
-direction = gets.chomp
+direction = gets.chomp.upcase
 
 rover = Rover.new(name,x_co,y_co,direction)
 puts rover.position
@@ -20,7 +20,7 @@ while cont == 'y'
 		rover.direction(input)
 		puts rover.position
 	elsif input == "M"
-		puts rover.move
+		rover.move
 		puts rover.position
 	else
 		puts "Invalid Command"
